@@ -26,15 +26,17 @@ def main():
         height_from_user_float = float(height_from_user_str)
 
         # if the height or base <= 0, tell them to enter positive num
-        if height_from_user_float <= 0 or base_from_user_float <= 0 :
+        if height_from_user_float <= 0 or base_from_user_float <= 0:
             print("Please enter a positive number for both values.")
-        else : 
+        else:
             # otherwise, call the calc_area_triangle() function
             calc_area_triangle(base_from_user_float, height_from_user_float)
     except:
-          # if the base or height cannot become a number, then tell the user to enter a number.
+        # if the base or height cannot become a number, then tell the user to enter a number.
         print(
-            "{} or {} is not a valid number.".format(base_from_user_str, height_from_user_str)
+            "{} or {} is not a valid number.".format(
+                base_from_user_str, height_from_user_str
+            )
         )
 
 
