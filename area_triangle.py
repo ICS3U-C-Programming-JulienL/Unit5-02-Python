@@ -18,20 +18,28 @@ def main():
     print("Calculating the Area of a Triangle")
     base_from_user_str = input("What is the base of your triangle (cm)?")
     height_from_user_str = input("What is the height of your triangle (cm)?")
-
     try:
-        # convert base and height to float
-        base_from_user_int = float(base_from_user_str)
-        height_from_user_int = float(height_from_user_str)
+        # convert base to float
+        base_from_user_float = float(base_from_user_str)
+    except:
+        # if the base cannot become a number, then tell the user to enter a number.
+        print(
+            "{} is not a valid number.".format(base_from_user_str)
+        )
+    try:
+        # convert height to float
+        height_from_user_float = float(height_from_user_str)
 
-        # call the calc_area_triangle() function
-        calc_area_triangle(base_from_user_int, height_from_user_int)
+        # if the height or base <= 0, tell them to enter positive num
+        if height_from_user_float <= 0 or base_from_user_float <= 0 :
+            print("Please enter a positive number.")
+        else : 
+            # otherwise, call the calc_area_triangle() function
+            calc_area_triangle(base_from_user_float, height_from_user_float)
     except:
         # if the base or height cannot become a number, then tell the user to enter a number.
         print(
-            "{} or {} is not a valid number.".format(
-                base_from_user_str, height_from_user_str
-            )
+            "{} is not a valid number.".format( height_from_user_str)
         )
 
 
