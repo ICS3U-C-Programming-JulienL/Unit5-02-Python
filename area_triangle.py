@@ -5,6 +5,14 @@
 # This program calculates the area of a triangle
 
 
+def calc_area_triangle(base, height):
+    # calculate area
+    area = (base * height) / 2
+
+    # display area
+    print("The area is {} cm^2".format(area))
+
+
 def main():
     # get base and height
     print("Calculating the Area of a Triangle")
@@ -25,14 +33,6 @@ def main():
                 base_from_user_str, height_from_user_str
             )
         )
-
-
-def calc_area_triangle(base, height):
-    # calculate area
-    area = (base * height) / 2
-
-    # display area
-    print("The area is {} cm^2".format(area))
 
 
 if __name__ == "__main__":
